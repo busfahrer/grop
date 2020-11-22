@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+# usage:
+# cat <some-json> | grop <grep arguments>
+
+gron | egrep "$@" | gron -u
