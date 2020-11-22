@@ -1,3 +1,8 @@
 #!/usr/bin/env bash
 
-gron | grep "$@" | gron -u
+# usage:
+# cat <some-json> | grop field1 field2
+# will grep for both fields in the json
+
+IFS="|" args="$*"
+gron | egrep "$args" | gron -u
